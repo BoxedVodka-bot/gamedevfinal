@@ -1,8 +1,9 @@
 
 if((distance_to_object(obj_npc1)<30)){
 	global.rTalk = true;
-	global.xBox = obj_player.x-200;
-	global.yBox = obj_player.y-150;
+	global.xBox = obj_npc1.x-200;
+	global.yBox = obj_npc1.y-150;
+	rtalk = true;
 }
 
 if(global.collideplayer == true){

@@ -2,8 +2,8 @@
 //step count set back to zero.
 if((distance_to_object(obj_npc2)<30)){
 	global.collideplayer2 = true;
-	global.xBox = obj_player.x-200;;
-	global.yBox = obj_player.y-150;
+	global.xBox = obj_npc2.x-200;;
+	global.yBox = obj_npc2.y-150;
 	stepcount2 =  0;
 	
 }

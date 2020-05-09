@@ -12,7 +12,7 @@ global.winstate = false;
 global.losestate = false;
 
 //with NPC1
-conv = ["Oh hello there." , "Juliet? I may or may not heard of her.", "Care for a game of poker?", "If you win, I may tell you a hint or two." ];
+conv = ["Oh hello there." , "And oh you are lucky, I do have the key.", "But before that, care for a game of poker?", "If you win, I will give you the key." ];
 conv_state = true;
 conv_track = 0;
 
@@ -25,7 +25,7 @@ conv_track = 0;
 //loseconv_track = 0;
 
 
-r_conv = ["Do you know where is Juliet?"]
+r_conv = ["Do you have the key to the tavern?"]
 r_state = true;
 r_track = 0;
 
@@ -57,3 +57,17 @@ mercutio2 = false;
 r_mer = ["Hi my dear friend, I need your help.", "I need to find Juliet."];
 r_mer_state = false;
 r_mer_track = 0;
+
+//with Shakespeare
+shake = ["Strange indeed.", "Maybe it is because you are but a character I have created."];
+shake_state = false;
+shake2 = [ "What if I tell you: you will die if you keep looking for her?", "If you follow this trial, you will find a gate where you can leave this place. Here is the key.", "Or you can keep looking for her and die.", "Think it over."];
+shake_state2 = false;
+shake_track = 0;
+shake_track2 = 0
+key1 = false;
+
+r_shake = ["You look strangely familiar."];
+r_shake_state = true;
+r_shake_state2 = false;
+r_shake_track = 0;

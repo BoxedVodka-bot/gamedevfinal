@@ -3,6 +3,5 @@
 //	}
 	
 if(keyboard_check_pressed(vk_space)){
-	room_goto(rm_game);
-	show_debug_message("enter");
+	room_goto(rm_intro);
 }

@@ -98,3 +98,39 @@ if(global.collideMercutio == true && mercutio_state && mercutio2 == false){
 		mercutio_track = 1
 	}
 }
+
+//with Shakespeare
+if(global.collideS && r_shake_state){
+	if(r_shake_track == 0 && keyboard_check_pressed(vk_space)){
+		r_shake_state = false;
+		shake_state = true;
+	}
+	
+}else if (global.collideS == true && shake_state){
+	if(shake_track == 0 && keyboard_check_pressed(vk_space)){
+		shake_track = 1;
+	}else if(shake_track == 1 && keyboard_check_pressed(vk_space)){
+		shake_state = false;
+		r_shake_state2 = true;
+	}
+}else if(global.collideS == true && r_shake_state2){
+	if(keyboard_check_pressed(vk_space)){
+		r_shake_state2 = false;
+		shake_state2 = true;
+	}
+}else if(global.collideS == true && shake_state2){
+	if(shake_track2 == 0 && keyboard_check_pressed(vk_space)){
+		shake_track2 = 1;
+	}else if(shake_track2 == 1 && keyboard_check_pressed(vk_space)){
+		shake_track2 = 2;
+	}else if(shake_track2 == 2 && keyboard_check_pressed(vk_space)){
+		shake_track2 = 3;
+		shake_state2 = false;
+		key1 = true
+		global.endkey1 = true;
+	}
+}
+
+if(keyboard_check_pressed(ord("R"))){
+	room_restart();
+}

@@ -1,4 +1,4 @@
-depth = -y;
+depth = -y-2;
 
 //NPC1
 if(global.collideplayer == true && conv_state){
@@ -93,7 +93,7 @@ if(global.collideMercutio == true && mercutio_state){
 }
 if(global.collideMercutio == true && r_mer_state){
 	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
-	draw_sprite_ext(spr_playeridle, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(spr_playeridle, 0, global.xBox-20, global.yBox+20, 1, 1, 0, c_white, 1);
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
@@ -108,4 +108,67 @@ if(global.collideMercutio == true && mercutio2_state){
 	draw_set_halign(fa_left);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Mercutio:", 15, 290, 1.3, 1.3, 0);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-20, mercutio[mercutio_track], 15, 290, 1.3, 1.3, 0);
+}
+
+//Door
+
+if(global.collidedoor == true){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "The door is locked, you will need a key to get in.", 15, 290, 1.3, 1.3, 0);
+}
+
+//shakespeare
+
+if(global.collideS == true && shake_state){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_sprite_ext(spr_shakespeare, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Shakespeare:", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, shake[shake_track], 15, 290, 1.3, 1.3, 0);
+	
+}
+
+if(global.collideS == true && r_shake_state){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_sprite_ext(spr_playeridle, 0, global.xBox-20, global.yBox+20, 1, 1, 0, c_white, 1);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Romeo:", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, r_shake[r_shake_track], 15, 290, 1.3, 1.3, 0);
+	
+}
+if(global.collideS == true && r_shake_state2){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_sprite_ext(spr_playeridle, 0, global.xBox-20, global.yBox+20, 1, 1, 0, c_white, 1);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Romeo:", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "What...?", 15, 290, 1.3, 1.3, 0);
+	
+}
+if(global.collideS == true && shake_state2){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_sprite_ext(spr_shakespeare, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Shakespeare:", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, shake2[shake_track2], 15, 290, 1.3, 1.3, 0);
+	
+}
+
+if(global.collideS == true && key1){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE GATE", 15, 290, 1.3, 1.3, 0);
+	
 }

@@ -150,7 +150,7 @@ if(global.collideS == true && r_shake_state2){
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Romeo:", 15, 290, 1.3, 1.3, 0);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "What...?", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "What...is this the real life, or is it just fantasy?", 15, 290, 1.3, 1.3, 0);
 	
 }
 if(global.collideS == true && shake_state2){

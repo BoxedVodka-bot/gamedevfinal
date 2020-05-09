@@ -71,9 +71,10 @@ if(global.collideTybalt == true && tybalt_state){
 	}else if (tybalt_track == 4 && keyboard_check_pressed(vk_space)){
 		tybalt_track = 5;
 	}else if(tybalt_track == 5){
+		draw_sprite(spr_tybalt_move, 0, 1280,672);
 		wait_time ++
 		if(wait_time == 60){
-			room_goto (rm_start);
+			room_goto (rm_getkilled);
 			wait_time = 0;
 		}
 	}

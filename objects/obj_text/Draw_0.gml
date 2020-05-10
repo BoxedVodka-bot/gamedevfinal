@@ -58,7 +58,7 @@ if(global.collideplayer2 == true && rTalk == true && r_npc2_state){
 	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "Romeo:", 15, 290, 1.3, 1.3, 0);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-20, r_npc2[r_npc2_track], 15, 290, 1.3, 1.3, 0);
 }
-if(global.collideplayer2 == true && dia2_state){
+if(global.collideplayer2 == true && dia2_state || global.wrong == true || global.right == true){
 	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
 	draw_sprite_ext(spr_npc2, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
 	draw_set_color(c_white);
@@ -66,6 +66,15 @@ if(global.collideplayer2 == true && dia2_state){
 	draw_set_halign(fa_left);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "RandomWine:", 15, 290, 1.3, 1.3, 0);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-20, dia2[dia2_track], 15, 290, 1.3, 1.3, 0);
+}
+
+if(global.collideplayer2 == true && global.key2){
+	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE LIGHT TUNNEL", 15, 290, 1.3, 1.3, 0);
+	
 }
 
 //Tybalt

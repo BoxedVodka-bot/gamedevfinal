@@ -53,8 +53,28 @@ if(global.collideplayer2 == true && dia_state){
 		dia2_track = 1;
 	}else if(dia2_track == 1 && keyboard_check_pressed(vk_space)){
 		dia2_track = 2
-	}else if(dia2_track == 2 && keyboard_check_pressed(vk_space)){
+		global.question = true;
+		if(global.question == true){
+			global.start_btn = instance_create_layer(250, 250, "UI", obj_btn1);
+			global.start_btn.Mytext = "goodnight till it be morrow.";
+			global.start_btn = instance_create_layer(600, 250, "UI", obj_btn2);
+			global.start_btn.Mytext = "goodbye till it be hollow."
+		}
+	}else if(dia2_track == 2 && global.wrong == true){
 		dia2_track = 3;
+	}else if(dia2_track == 3 && global.wrong == true && keyboard_check_pressed(vk_space)){
+		dia2_track = 1;
+		global.wrong = false;
+		global.question = false;
+	}else if(dia2_track == 2 && global.right == true){
+		dia2_track = 4;
+		global.right = false;
+	}else if(dia2_track == 4 && keyboard_check_pressed(vk_space)){
+		dia2_track = 5;
+	}else if(dia2_track == 5 && keyboard_check_pressed(vk_space)){
+		dia2_state = false;
+		global.key2 = true;
+		global.endkey2 = true;
 	}
 }
 

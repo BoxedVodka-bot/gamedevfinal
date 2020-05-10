@@ -1,0 +1,1 @@
+global.playerhealth = 3;

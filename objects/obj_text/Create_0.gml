@@ -10,6 +10,11 @@ global.yBox = 0;
 global.collideplayer2 = false;
 global.winstate = false;
 global.losestate = false;
+global.collideS = false;
+
+
+global.right = false;
+global.wrong = false;
 
 //with NPC1
 conv = ["Oh hello there." , "And oh you are lucky, I do have the key.", "But before that, care for a game of poker?", "If you win, I will give you the key." ];
@@ -34,9 +39,11 @@ dia = ["Oi mate,", "Looking for someone?"];
 dia_state = true;
 dia_track = 0;
 
-dia2 = [ "Ah, I used to be a lover like you, then I took an arrow in the knee.", "But play a game with me first.", "It's been a long time anyone comes here.", "If you can solve this, I'll take you to her."];
+dia2 = [ "Ah, I used to be a lover like you, then I took an arrow in the knee.", "But play a game with me first.", " 'Parting is such sweet sorrow that I shall say ____' ", "Too bad you were wrong. Try again.", "Aye.", "Now go to the bright tunnel, and she will be waiting over there."];
 dia2_state = false;
 dia2_track = 0;
+global.question = false;
+global.key2 = false;
 
 r_npc2 = ["I'm looking for Juliet."];
 r_npc2_state = false;

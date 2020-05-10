@@ -5,23 +5,13 @@
     "name": "obj_wall",
     "eventList": [
         {
-            "id": "d192b438-d435-48a2-9e23-045618140673",
+            "id": "08baaf4f-fe77-4e0b-8fb7-97c539d7887a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "collisionObjectId": "4962acb6-7ada-4b5f-908b-1c35f193d441",
             "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "442c9b57-880e-4447-83a9-ccd7619a8349"
-        },
-        {
-            "id": "143b4066-33f7-46fe-952d-24abc9e2434e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
+            "eventtype": 4,
             "m_owner": "442c9b57-880e-4447-83a9-ccd7619a8349"
         }
     ],

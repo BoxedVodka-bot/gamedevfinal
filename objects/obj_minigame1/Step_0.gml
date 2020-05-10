@@ -3,7 +3,7 @@
 	
 //states
 if(room == rm_minigame1){
-if(global.comp_score < 1 || global.player_score < 1){
+if(global.comp_score < 5 || global.player_score < 5){
 switch (global.game_state) {
 	
 	case global.state_intro:
@@ -145,15 +145,16 @@ switch (global.game_state) {
 					global.player_played_card.target_x = room_width/2;
 					ds_list_add(global.cards_on_the_table, global.player_played_card);
 					ds_list_delete(global.player_hand, global.player_played_card)
-					myTime = 5;
+					myTime = 3;
 					global.game_state = global.state_reveal;
+
 				}
 					
 			} 
 			if (myTime = 0){
 				global.game_state = global.state_discard;
 				global.comp_score ++;
-				myTime = 5;
+				myTime = 3;
 			}
 		break;
 		
@@ -167,53 +168,55 @@ switch (global.game_state) {
 			
 			//AI selected card face up
 			//if(global.comp_played_card.face_up == false){
-			//	global.comp_played_card.face_up = true;
+				//global.comp_played_card.face_up = true;
 				
 				if(global.comp_played_card.face_up == true){
 					if(global.comp_played_card.card_type == global.player_played_card.card_type){
 						global.player_score += 1;
 						global.comp_score = global.comp_score;
+						if(!audio_is_playing(snd_win)){
+							audio_play_sound(snd_win, 90, false);
+							}
+						
 					}
-					if(!global.comp_played_card.card_type == global.player_played_card.card_type){
+					global.game_state = global.state_discard;
+					if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.paper){
 						global.comp_score += 1;
+						global.playerhealth -=1;
 						if(!audio_is_playing(snd_lose)){
 							audio_play_sound(snd_lose, 90, false);
 							}
 					}
-					//if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.paper){
-					//	global.comp_score += 1;
-					//	if(!audio_is_playing(snd_lose)){
-					//		audio_play_sound(snd_lose, 90, false);
-					//		}
-					//}
-					//if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.scissor){
-					//	global.comp_score += 1;
-					//	if(!audio_is_playing(snd_lose)){
-					//		audio_play_sound(snd_lose, 90, false);
-					//		}
-					//}
-					//if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.paper){
-					//	global.player_score += 1;
-					//	if(!audio_is_playing(snd_win)){
-					//		audio_play_sound(snd_win, 90, false);
-					//		}
-					//}
-					//if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.rock){
-					//	global.player_score += 1;
-					//	if(!audio_is_playing(snd_win)){
-					//		audio_play_sound(snd_win, 90, false);
-					//		}
-					//}
-					//if(global.comp_played_card.card_type == global.paper && global.player_played_card.card_type == global.scissor){
-					//	global.player_score += 1;
-					//	if(!audio_is_playing(snd_win)){
-					//		audio_play_sound(snd_win, 90, false);
-					//		}
-					//}
+					if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.scissor){
+						global.comp_score += 1;
+						global.playerhealth -=1;
+						if(!audio_is_playing(snd_lose)){
+							audio_play_sound(snd_lose, 90, false);
+							}
+					}
+					if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.paper){
+						global.comp_score += 1;
+						global.playerhealth -=1;
+						if(!audio_is_playing(snd_lose)){
+							audio_play_sound(snd_lose, 90, false);
+							}
+					}
+					if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.rock){
+						global.comp_score += 1;
+						global.playerhealth -=1;
+						if(!audio_is_playing(snd_lose)){
+							audio_play_sound(snd_lose, 90, false);
+							}
+					}
+					if(global.comp_played_card.card_type == global.paper && global.player_played_card.card_type == global.scissor){
+						global.comp_score += 1;
+						global.playerhealth -=1;
+						if(!audio_is_playing(snd_lose)){
+							audio_play_sound(snd_lose, 90, false);
+							}
+					}
 				//}
-			} 
-			else {
-			global.game_state = global.state_discard;
+			} else {
 			}
 			wait_time = 0;
 		}
@@ -344,7 +347,7 @@ switch (global.game_state) {
 }
 
 //Win or lose state
-if(global.comp_score == 1){
+if(global.comp_score == 5 || global.playerhealth == 0){
 	wait_time ++
 	if(wait_time == 25){
 		//audio_stop_sound(snd_classic);
@@ -356,7 +359,7 @@ if(global.comp_score == 1){
 		y = 960;
 		wait_time = 0;
 	}
-}else if(global.player_score == 1){
+}else if(global.player_score == 5){
 	wait_time ++
 	global.inhouse = true;
 	if(wait_time == 25){

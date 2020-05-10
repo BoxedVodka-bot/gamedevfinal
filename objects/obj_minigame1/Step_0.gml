@@ -117,6 +117,9 @@ switch (global.game_state) {
 				ds_list_add(global.cards_on_the_table, global.comp_played_card);
 				ds_list_delete(global.comp_hand, global.comp_played_card);
 				wait_time = 0 //.1*room_speed;
+				if(global.comp_played_card.face_up == false){
+				global.comp_played_card.face_up = true;
+				}
 			} else {
 				wait_time = 0.1*room_speed;
 				global.game_state = global.state_play;	
@@ -163,52 +166,53 @@ switch (global.game_state) {
 		if(wait_time >= 90){
 			
 			//AI selected card face up
-			if(global.comp_played_card.face_up == false){
-				global.comp_played_card.face_up = true;
+			//if(global.comp_played_card.face_up == false){
+			//	global.comp_played_card.face_up = true;
 				
 				if(global.comp_played_card.face_up == true){
 					if(global.comp_played_card.card_type == global.player_played_card.card_type){
-						global.player_score = global.player_score;
+						global.player_score += 1;
 						global.comp_score = global.comp_score;
 					}
-					if(global.comp_played_card.card_type == global.paper && global.player_played_card.card_type == global.rock){
+					if(!global.comp_played_card.card_type == global.player_played_card.card_type){
 						global.comp_score += 1;
 						if(!audio_is_playing(snd_lose)){
 							audio_play_sound(snd_lose, 90, false);
 							}
 					}
-					if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.paper){
-						global.comp_score += 1;
-						if(!audio_is_playing(snd_lose)){
-							audio_play_sound(snd_lose, 90, false);
-							}
-					}
-					if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.scissor){
-						global.comp_score += 1;
-						if(!audio_is_playing(snd_lose)){
-							audio_play_sound(snd_lose, 90, false);
-							}
-					}
-					if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.paper){
-						global.player_score += 1;
-						if(!audio_is_playing(snd_win)){
-							audio_play_sound(snd_win, 90, false);
-							}
-					}
-					if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.rock){
-						global.player_score += 1;
-						if(!audio_is_playing(snd_win)){
-							audio_play_sound(snd_win, 90, false);
-							}
-					}
-					if(global.comp_played_card.card_type == global.paper && global.player_played_card.card_type == global.scissor){
-						global.player_score += 1;
-						if(!audio_is_playing(snd_win)){
-							audio_play_sound(snd_win, 90, false);
-							}
-					}
-				}
-			} else {
+					//if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.paper){
+					//	global.comp_score += 1;
+					//	if(!audio_is_playing(snd_lose)){
+					//		audio_play_sound(snd_lose, 90, false);
+					//		}
+					//}
+					//if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.scissor){
+					//	global.comp_score += 1;
+					//	if(!audio_is_playing(snd_lose)){
+					//		audio_play_sound(snd_lose, 90, false);
+					//		}
+					//}
+					//if(global.comp_played_card.card_type == global.rock && global.player_played_card.card_type == global.paper){
+					//	global.player_score += 1;
+					//	if(!audio_is_playing(snd_win)){
+					//		audio_play_sound(snd_win, 90, false);
+					//		}
+					//}
+					//if(global.comp_played_card.card_type == global.scissor && global.player_played_card.card_type == global.rock){
+					//	global.player_score += 1;
+					//	if(!audio_is_playing(snd_win)){
+					//		audio_play_sound(snd_win, 90, false);
+					//		}
+					//}
+					//if(global.comp_played_card.card_type == global.paper && global.player_played_card.card_type == global.scissor){
+					//	global.player_score += 1;
+					//	if(!audio_is_playing(snd_win)){
+					//		audio_play_sound(snd_win, 90, false);
+					//		}
+					//}
+				//}
+			} 
+			else {
 			global.game_state = global.state_discard;
 			}
 			wait_time = 0;

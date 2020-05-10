@@ -9,7 +9,9 @@
         "1b905541-e87c-4aac-ad08-ebd581f3ba1e",
         "09492d83-0e2c-465f-855b-c774b62e7e75",
         "cff3184d-2bb0-4506-a6af-f947a1a6c6eb",
-        "280e256d-9548-46aa-accc-a5f108b8598f"
+        "280e256d-9548-46aa-accc-a5f108b8598f",
+        "b42cb635-23f0-4937-8730-69108c1b3e95",
+        "fbff009d-4a09-4495-86d8-a5ec5f16ca1d"
     ],
     "filterType": "GMObject",
     "folderName": "spr_stuff",

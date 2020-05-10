@@ -61,7 +61,7 @@ r_mer_track = 0;
 //with Shakespeare
 shake = ["Strange indeed.", "Maybe it is because you are but a character I have created."];
 shake_state = false;
-shake2 = [ "What if I tell you: you will die if you keep looking for her?", "If you follow this trial, you will find a gate where you can leave this place. Here is the key.", "Or you can keep looking for her and die.", "Think it over."];
+shake2 = [ "What if I tell you: you will die if you keep looking for her?", "If you follow this trial, you will find a tunnel where you can leave this place. Here is the key.", "Or you can keep looking for her and die.", "Think it over."];
 shake_state2 = false;
 shake_track = 0;
 shake_track2 = 0

@@ -169,6 +169,23 @@ if(global.collideS == true && key1){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE GATE", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE DARK TUNNEL", 15, 290, 1.3, 1.3, 0);
 	
+}
+
+//tunnel
+if(global.nokey == true){
+	draw_sprite(spr_textbox, 0, obj_tunnel.x - 50, obj_tunnel.y-50);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(obj_tunnel.x-80, obj_tunnel.y-80, "You need the KEY TO THE DARK TUNNEL", 15, 290, 1.3, 1.3, 0);
+}
+//tunnel2
+if(global.nokey2 == true){
+	draw_sprite(spr_textbox, 0, obj_tunnel.x - 50, obj_tunnel.y-50);
+	draw_set_color(c_white);
+	draw_set_font(fnt_text);
+	draw_set_halign(fa_left);
+	draw_text_ext_transformed(obj_tunnel.x-80, obj_tunnel.y-80, "You need the KEY TO THE BRIGHT TUNNEL", 15, 290, 1.3, 1.3, 0);
 }

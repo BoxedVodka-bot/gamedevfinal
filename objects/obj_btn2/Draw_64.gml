@@ -17,7 +17,9 @@ if(position_meeting (mouse_x, mouse_y, id)){
 
 if(position_meeting (mouse_x, mouse_y, id)&& mouse_check_button_pressed(mb_left)){
 	global.wrong = true;
+		if(!audio_is_playing(snd_flippage)){
+		audio_play_sound(snd_flippage, 90, false);
+	}
 	instance_destroy(obj_btn2);
 	instance_destroy(obj_btn1);
-	show_debug_message("wrong");
 }

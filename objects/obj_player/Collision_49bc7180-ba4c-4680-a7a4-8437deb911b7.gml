@@ -1,6 +1,7 @@
-//If the player is in a certain range and press space bar, text box show up.
-//step count set back to zero.
 if((distance_to_object(obj_npc2)<30)){
+	if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+	}
 	global.collideplayer2 = true;
 	global.xBox = obj_npc2.x-200;;
 	global.yBox = obj_npc2.y-150;

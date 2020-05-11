@@ -14,7 +14,7 @@ if(keyboard_check(ord("A"))){
 	x -= walkspeed;
 	sprite_index = spr_playerside;
 	image_xscale = 1;
-	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true){
+	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true ||global.barkey == true){
 		stepcount ++;
 	}else if(global.collideplayer2 == true){
 		stepcount2 ++;
@@ -28,7 +28,7 @@ if(keyboard_check(ord("D"))){
 	x += walkspeed;
 	sprite_index = spr_playerside;
 	image_xscale = -1;
-	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true){
+	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true ||global.barkey == true){
 		stepcount ++;
 	}else if (global.collideplayer2 == true){
 		stepcount2 ++;
@@ -42,7 +42,7 @@ if(keyboard_check(ord("D"))){
 if(keyboard_check(ord("W"))){
 	y -= walkspeed;
 	sprite_index = spr_playerback;
-	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true){
+	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true || rtalk == true ||global.collideS == true || global.nokey == true || global.nokey2 == true ||global.barkey == true){
 		stepcount ++;
 	}else if (global.collideplayer2 == true){
 		stepcount2 ++;
@@ -55,7 +55,7 @@ if(keyboard_check(ord("W"))){
 if(keyboard_check(ord("S"))){
 	y += walkspeed;
 	sprite_index = spr_player;
-	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true|| rtalk == true ||global.collideS == true || global.nokey == true|| global.nokey2 == true){
+	if(global.collideplayer == true || global.collideTybalt == true || global.collideMercutio == true || global.collidedoor == true|| rtalk == true ||global.collideS == true || global.nokey == true|| global.nokey2 == true ||global.barkey == true){
 		stepcount ++;
 	}else if (global.collideplayer2 == true){
 		stepcount2 ++;
@@ -75,6 +75,7 @@ if(stepcount >= 20){
 	global.collideS = false;
 	global.nokey = false;
 	global.nokey2 = false;
+	global.barkey = false;
 	rtalk = false;
 	stepcount = 0;
 }

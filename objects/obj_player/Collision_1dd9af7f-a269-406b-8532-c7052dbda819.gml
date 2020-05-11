@@ -1,5 +1,8 @@
 
 if((distance_to_object(obj_npc1)<30)){
+	if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+	}
 	global.rTalk = true;
 	global.xBox = obj_npc1.x-200;
 	global.yBox = obj_npc1.y-150;

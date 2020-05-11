@@ -1,5 +1,3 @@
-//background music
-
 	
 //states
 if(room == rm_minigame1){
@@ -352,24 +350,16 @@ if(global.comp_score == 5 || global.playerhealth == 0){
 	if(wait_time == 25){
 		//audio_stop_sound(snd_classic);
 		//audio_stop_sound(snd_competitive);
-		global.losestate = true;
-		global.winstate = false;
-		room_goto(rm_game);
-		x = 780;
-		y = 960;
+		room_goto(rm_minilose);
 		wait_time = 0;
 	}
 }else if(global.player_score == 5){
 	wait_time ++
 	global.inhouse = true;
 	if(wait_time == 25){
-		global.winstate = true;
-		global.losestate = false;
 		//audio_stop_sound(snd_classic);
 		//audio_stop_sound(snd_competitive);
-		room_goto(rm_game);
-		x = 780;
-		y = 960;
+		room_goto(rm_miniwin);
 		wait_time = 0;
 	}
 }

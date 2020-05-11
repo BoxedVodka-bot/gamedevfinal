@@ -12,10 +12,8 @@ global.collidedoor = false;
 global.collideS = false;
 
 rtalk = false;
-global.inhouse = false;
 
 global.endkey1 = false;
-global.endkey2 = false;
 global.barkey = false;
 global.nokey = false;
 global.nokey2 = false;

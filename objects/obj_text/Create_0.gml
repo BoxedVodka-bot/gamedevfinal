@@ -12,6 +12,9 @@ global.winstate = false;
 global.losestate = false;
 global.collideS = false;
 
+global.inhouse = false;
+
+global.endkey2 = false;
 
 global.right = false;
 global.wrong = false;
@@ -20,15 +23,6 @@ global.wrong = false;
 conv = ["Oh hello there." , "And oh you are lucky, I do have the key.", "But before that, care for a game of poker?", "If you win, I will give you the key." ];
 conv_state = true;
 conv_track = 0;
-
-//winconv = ["You know what, maybe you should check out that house over there."]
-//winconv_state = true;
-//winconv_track = 0;
-
-//loseconv = ["you are not worthy of my infromation. Maybe try again later."]
-//loseconv_state = true;
-//loseconv_track = 0;
-
 
 r_conv = ["Do you have the key to the tavern?"]
 r_state = true;
@@ -43,7 +37,7 @@ dia2 = [ "Ah, I used to be a lover like you, then I took an arrow in the knee.",
 dia2_state = false;
 dia2_track = 0;
 global.question = false;
-global.key2 = false;
+key2 = false;
 
 r_npc2 = ["I'm looking for Juliet."];
 r_npc2_state = false;

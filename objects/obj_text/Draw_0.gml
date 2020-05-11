@@ -58,7 +58,7 @@ if(global.collideplayer2 == true && key2){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE BRIGHT TUNNEL", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE BRIGHT TUNNEL", 15, 320, 1.3, 1.3, 0);
 	
 }
 
@@ -163,7 +163,7 @@ if(global.collideS == true && key1){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE DARK TUNNEL", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE DARK TUNNEL", 15, 320, 1.3, 1.3, 0);
 	
 }
 
@@ -173,7 +173,7 @@ if(global.nokey == true){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(obj_tunnel.x-130, obj_tunnel.y-180, "You need the KEY TO THE DARK TUNNEL", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(obj_tunnel.x-130, obj_tunnel.y-180, "You need the KEY TO THE DARK TUNNEL", 15, 320, 1.3, 1.3, 0);
 }
 //tunnel2
 if(global.nokey2 == true){

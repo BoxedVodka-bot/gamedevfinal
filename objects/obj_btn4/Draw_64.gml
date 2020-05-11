@@ -16,7 +16,7 @@ if(position_meeting (mouse_x, mouse_y, id)){
 
 
 if(position_meeting (mouse_x, mouse_y, id)&& mouse_check_button_pressed(mb_left)){
-	global.wrong = true;
+	global.right = true;
 		if(!audio_is_playing(snd_flippage)){
 		audio_play_sound(snd_flippage, 90, false);
 	}

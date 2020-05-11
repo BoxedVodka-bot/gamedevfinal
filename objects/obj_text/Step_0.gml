@@ -93,25 +93,60 @@ if(global.collideplayer2 == true && dia_state){
 		if(!audio_is_playing(snd_bubble)){
 		audio_play_sound(snd_bubble, 90, false);
 	}
+		global.wrong = false;
+		global.question = false;
 	}else if(dia2_track == 3 && global.wrong == true && keyboard_check_pressed(vk_space)){
 		dia2_track = 1;
 		if(!audio_is_playing(snd_bubble)){
 		audio_play_sound(snd_bubble, 90, false);
 	}
-		global.wrong = false;
-		global.question = false;
+
 	}else if(dia2_track == 2 && global.right == true){
 		dia2_track = 4;
+		global.question = false;
 		if(!audio_is_playing(snd_bubble)){
 		audio_play_sound(snd_bubble, 90, false);
 	}
 		global.right = false;
 	}else if(dia2_track == 4 && keyboard_check_pressed(vk_space)){
 		dia2_track = 5;
+		global.question = true;
+		if(global.question == true){
+			global.start_btn = instance_create_layer(250, 350, "UI", obj_btn3);
+			global.start_btn.Mytext = "sadness.";
+			global.start_btn = instance_create_layer(680, 350, "UI", obj_btn4);
+			global.start_btn.Mytext = "sigh."
+		}
 		if(!audio_is_playing(snd_bubble)){
 		audio_play_sound(snd_bubble, 90, false);
 	}
-	}else if(dia2_track == 5 && keyboard_check_pressed(vk_space)){
+	}else if(dia2_track == 5 && global.wrong == true){
+		dia2_track = 6;
+		if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+		}
+	}else if(dia2_track == 6 && global.wrong == true && keyboard_check_pressed(vk_space)){
+		dia2_track = 4;
+		global.wrong = false;
+		global.question = false;
+		if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+		}
+	}else if(dia2_track == 5 && global.right == true){
+		dia2_track = 7;
+		if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+		}
+	}else if(dia2_track == 7 && global.right == true && keyboard_check_pressed(vk_space)){
+		dia2_track = 8;
+		if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+		}
+		global.right = false;
+	}else if(dia2_track == 8 && keyboard_check_pressed(vk_space)){
+		if(!audio_is_playing(snd_bubble)){
+		audio_play_sound(snd_bubble, 90, false);
+		}
 		dia2_state = false;
 		key2 = true;
 		global.endkey2 = true;
@@ -120,6 +155,7 @@ if(global.collideplayer2 == true && dia_state){
 	}
 	}
 }
+
 
 //With Tybalt
 if(global.collideTybalt == true && tybalt_state){

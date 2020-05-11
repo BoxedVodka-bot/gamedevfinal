@@ -18,7 +18,7 @@ global.right = false;
 global.wrong = false;
 
 //with NPC1
-conv = ["*Sigh*" , "Alright, you got me.", "Here's the key to the bar. Be careful out there." ];
+conv = ["*Sigh*" , "Alright, you got me.", "Here's the key to the tavern. Be careful out there." ];
 conv_state = false;
 conv_track = 0;
 

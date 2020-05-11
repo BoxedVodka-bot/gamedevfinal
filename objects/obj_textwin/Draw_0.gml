@@ -180,6 +180,6 @@ if(global.collideplayer == true && global.barkey == true){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE BAR", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE TAVERN", 15, 290, 1.3, 1.3, 0);
 	
 }

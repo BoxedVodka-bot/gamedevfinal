@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0f3308db-5f3a-48e1-bde0-62b44b626ed2",
+            "Value": {
+                "id": "5b8a910b-1cc3-4872-80df-2acaec828edb",
+                "resourcePath": "objects\/obj_btn3\/obj_btn3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "119e52d6-7b31-49ee-beb6-1185c25a144b",
             "Value": {
                 "id": "0e5f09b7-9ebb-4ea0-977a-91d1fa6f23d9",
@@ -1059,6 +1067,14 @@
             "Value": {
                 "id": "8ae6d219-00a0-4826-8ed6-28e73035b7ea",
                 "resourcePath": "objects\/obj_Mercutio\/obj_Mercutio.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d639cf9b-50b9-4aa4-8a10-718a55bfab62",
+            "Value": {
+                "id": "0af7c421-d60b-45da-a6bb-19ec49194826",
+                "resourcePath": "objects\/obj_btn4\/obj_btn4.yy",
                 "resourceType": "GMObject"
             }
         },

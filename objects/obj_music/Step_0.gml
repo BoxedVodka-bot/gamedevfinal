@@ -31,7 +31,9 @@ if(room == rm_redeemed){
 	
 }
 if(room == rm_minigame1){
-	
+	if(!audio_is_playing(snd_minigame)){
+		audio_play_sound(snd_minigame, 50, true);
+	}
 }
 if(room == rm_getkilled){
 	

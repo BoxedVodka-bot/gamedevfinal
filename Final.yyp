@@ -943,6 +943,14 @@
             }
         },
         {
+            "Key": "cd8bdc8c-5f41-4cf0-b8f0-5c233a1ef869",
+            "Value": {
+                "id": "5bc251ad-5370-4239-8259-0e154fda89e8",
+                "resourcePath": "sounds\/snd_minigame\/snd_minigame.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cde205a6-7e79-48d8-b5f1-69ae3c9b2b0c",
             "Value": {
                 "id": "609d5adc-b576-4ddf-8f31-7bf5d26d517b",

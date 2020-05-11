@@ -83,9 +83,9 @@ if(global.collideplayer2 == true && dia_state){
 	}
 		global.question = true;
 		if(global.question == true){
-			global.start_btn = instance_create_layer(280, 330, "UI", obj_btn1);
+			global.start_btn = instance_create_layer(250, 350, "UI", obj_btn1);
 			global.start_btn.Mytext = "goodnight till it be morrow.";
-			global.start_btn = instance_create_layer(630, 330, "UI", obj_btn2);
+			global.start_btn = instance_create_layer(680, 350, "UI", obj_btn2);
 			global.start_btn.Mytext = "goodbye till it be hollow."
 		}
 	}else if(dia2_track == 2 && global.wrong == true){

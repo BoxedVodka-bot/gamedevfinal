@@ -72,31 +72,6 @@ switch (global.game_state) {
 		}
 		break;
 
-	//case global.state_peek:
-	
-	//	wait_time ++;
-	//	count_time ++;
-	//	letclick = true;
-	//	if (wait_time >=40) {
-	//		if(global.peek_card == noone){
-	//			if(!audio_is_playing(snd_flip)){
-	//			audio_play_sound(snd_flip, 90, false);
-	//			}
-	//			var cards_in_comp_hand = ds_list_size(global.comp_hand);
-	//			var random_card_number = irandom_range(0,cards_in_comp_hand - 1);
-	//			global.peek_card = global.comp_hand[| random_card_number];	
-	//			global.peek_card.face_up = true;
-	//			wait_time = 0 //.1*room_speed;
-	//		} else if(count_time == 120) {
-	//			global.peek_card.face_up = false;
-	//			count_time = 0;
-	//			wait_time = 0.1*room_speed;
-	//			global.game_state = global.state_compplay;	
-	//		}	
-	//	}
-	
-	//break;
-
 	case global.state_compplay:
 	//AI plays card
 		in_hand = false;
@@ -348,8 +323,7 @@ switch (global.game_state) {
 if(global.comp_score == 5 || global.playerhealth == 0){
 	wait_time ++
 	if(wait_time == 25){
-		//audio_stop_sound(snd_classic);
-		//audio_stop_sound(snd_competitive);
+		audio_stop_sound(snd_minigame);
 		room_goto(rm_minilose);
 		wait_time = 0;
 	}
@@ -357,8 +331,7 @@ if(global.comp_score == 5 || global.playerhealth == 0){
 	wait_time ++
 	global.inhouse = true;
 	if(wait_time == 25){
-		//audio_stop_sound(snd_classic);
-		//audio_stop_sound(snd_competitive);
+		audio_stop_sound(snd_minigame);
 		room_goto(rm_miniwin);
 		wait_time = 0;
 	}

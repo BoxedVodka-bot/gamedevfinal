@@ -3,9 +3,11 @@ if (global.endkey2 == false){
 	if(!audio_is_playing(snd_unlock)){
 		audio_play_sound(snd_unlock, 90, false);
 	}
+	audio_stop_sound(snd_fire);
 }else if(global.endkey2 == true){
 	room_goto(rm_houseout2);
 	if(!audio_is_playing(snd_unlock)){
 		audio_play_sound(snd_unlock, 90, false);
 	}
+	audio_stop_sound(snd_fire);
 }

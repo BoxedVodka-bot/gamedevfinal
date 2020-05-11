@@ -10,5 +10,5 @@ if(ShowText == true){
 
 //Set timer
 draw_set_font(fnt_start);
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_text_transformed(460, 30, "Time Left:" + string(myTime), 1, 1, 0);

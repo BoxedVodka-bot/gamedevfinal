@@ -2,7 +2,7 @@ draw_self();
 	draw_set_color(fnt_start);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
-	draw_text_transformed_color(x, y, Mytext, 0.8, 0.8, 0, c_white, c_white, c_white, c_white, 1);
+	draw_text_transformed_color(x, y, Mytext, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
 
 if(position_meeting (mouse_x, mouse_y, id)){
 	image_index = 1;
@@ -15,7 +15,7 @@ if(position_meeting (mouse_x, mouse_y, id)){
 
 
 
-if(position_meeting (mouse_x, mouse_y, id)&& mouse_check_button_pressed(mb_left)){
+if(position_meeting (mouse_x, mouse_y, id) && mouse_check_button_pressed(mb_left)){
 	global.right = true;
 	if(!audio_is_playing(snd_flippage)){
 		audio_play_sound(snd_flippage, 90, false);

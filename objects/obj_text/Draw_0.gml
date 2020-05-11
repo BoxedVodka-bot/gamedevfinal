@@ -10,22 +10,7 @@ if(global.collideplayer == true && conv_state){
 	draw_text_ext_transformed(global.xBox+30, global.yBox-50, "BoxedVodka:", 15, 290, 1.3, 1.3, 0);
 	draw_text_ext_transformed(global.xBox+30, global.yBox-20, conv[conv_track], 15, 290, 1.3, 1.3, 0);
 }
-//if(global.collideplayer == true && winconv_state && global.winstate == true && global.losestate == false){
-//	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
-//	draw_sprite_ext(spr_npc1, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
-//	draw_set_color(c_white);
-//	draw_set_font(fnt_text);
-//	draw_set_halign(fa_left);
-//	draw_text_ext_transformed(global.xBox+30, global.yBox-50, winconv[winconv_track], 15, 290, 1.3, 1.3, 0);
-//}
-//if(global.collideplayer == true && loseconv_state && global.losestate == true && global.winstate == false){
-//	draw_sprite(spr_textbox, 0, global.xBox, global.yBox);
-//	draw_sprite_ext(spr_npc1, 0, global.xBox-20, global.yBox, 1, 1, 0, c_white, 1);
-//	draw_set_color(c_white);
-//	draw_set_font(fnt_text);
-//	draw_set_halign(fa_left);
-//	draw_text_ext_transformed(global.xBox+30, global.yBox-50, loseconv[loseconv_track], 15, 290, 1.3, 1.3, 0);
-//}
+
 
 
 if(global.rTalk == true && r_state && delete == false){
@@ -73,7 +58,7 @@ if(global.collideplayer2 == true && key2){
 	draw_set_color(c_white);
 	draw_set_font(fnt_text);
 	draw_set_halign(fa_left);
-	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE LIGHT TUNNEL", 15, 290, 1.3, 1.3, 0);
+	draw_text_ext_transformed(global.xBox+30, global.yBox-20, "You have aquired KEY TO THE BRIGHT TUNNEL", 15, 290, 1.3, 1.3, 0);
 	
 }
 

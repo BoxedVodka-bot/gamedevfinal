@@ -20,7 +20,10 @@ if(room == rm_game || room == rm_miniwin || room == rm_houseout || room == rm_ho
 }
 
 if(room == rm_inhouse){
-
+	if(!audio_is_playing(snd_fire)){
+		audio_play_sound(snd_fire, 50, true);
+	}
+	
 	
 }
 

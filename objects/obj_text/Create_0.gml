@@ -49,7 +49,7 @@ tybalt_state = true;
 tybalt_track = 0;
 
 //with Mercutio
-mercutio = ["Oh that, my friend, Mercutio can offer a help or two.", "A friend of mine in the bar may know her location."];
+mercutio = ["Oh that, my friend, Mercutio can offer a help or two.", "A friend of mine in the tavern may know her location."];
 mercutio_state = true;
 mercutio2_state = false;
 mercutio_track = 0;
